@@ -22,7 +22,7 @@ app.get("/notes", (req, res) => {
     connection.connect((err) => {
         if (err) console.log("err", err);
 
-        let query = "SELECT * FROM todo WHERE done=0";
+        let query = "SELECT * FROM notes";
 
         connection.query(query, (err, data) => {
             if (err) console.log("err", err);
