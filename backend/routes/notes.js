@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 // GET /notes, get all documents
-app.get("/notes", (req, res) => {
+router.get("/", (req, res) => {
 
     connection.connect((err) => {
         if (err) console.log("err", err);
@@ -21,6 +21,7 @@ app.get("/notes", (req, res) => {
     })
 })
 
+/*
 // GET /notes/:id, get specific document
 app.get("/notes/", (req, res) => {
 
@@ -37,6 +38,7 @@ app.get("/notes/", (req, res) => {
         })
     })
 })
+*/
 
 
 module.exports = router;
