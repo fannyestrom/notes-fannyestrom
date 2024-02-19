@@ -21,14 +21,14 @@ router.get("/", (req, res) => {
     })
 })
 
-/*
-// GET /notes/:id, get specific document
-app.get("/notes/", (req, res) => {
 
-    this.connection.connect((err) => {
+// GET /notes/:id, get specific document
+router.get("/:id", (req, res) => {
+
+    connection.connect((err) => {
         if (err) console.log("err", err);
 
-        let query = "SELECT * FROM notes";
+        let query = `SELECT * FROM notes WHERE id = ${req.params.id}`;
 
         connection.query(query, (err, data) => {
             if (err) console.log("err", err);
@@ -38,7 +38,8 @@ app.get("/notes/", (req, res) => {
         })
     })
 })
-*/
+
+
 
 
 module.exports = router;
