@@ -3,7 +3,7 @@ const connection = require('../lib/conn');
 const router = express.Router();
 
 
-// GET /notes, get all documents
+// GET /notes, get all notes
 router.get("/", (req, res) => {
 
     connection.connect((err) => {
@@ -21,8 +21,7 @@ router.get("/", (req, res) => {
     })
 })
 
-
-// GET /notes/:id, get specific document
+// GET /notes/:id, get specific note
 router.get("/:id", (req, res) => {
 
     connection.connect((err) => {
@@ -39,7 +38,12 @@ router.get("/:id", (req, res) => {
     })
 })
 
+/*
+// POST /notes/add, create note
+router.post("/add", (req, res) => {
 
-
+    
+})
+*/
 
 module.exports = router;

@@ -10,8 +10,13 @@ function printNotes() {
         const notesList = document.getElementById('notesList');
         data.forEach(notes => {
             const listItem = document.createElement('li');
+            const link = document.createElement('a');
         
-            listItem.textContent = notes.title;
+            link.textContent = notes.title;
+            link.href = `http://localhost:3000/notes/${notes.id}`;
+            link.style.cursor = 'pointer';
+
+            listItem.appendChild(link);
             notesList.appendChild(listItem);
         });
     })
