@@ -10,3 +10,13 @@ GET http://localhost:3000/notes
 GET http://localhost:3000/notes/1
 
 ###
+
+POST http://localhost:3000/notes/add
+Content-Type: application/json
+
+{
+  "title": "Test Note",
+  "content": "This is a test note."
+}
+
+###

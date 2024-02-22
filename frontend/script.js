@@ -14,9 +14,26 @@ tinymce.init({
 })
 
 document.getElementById('saveBtn').addEventListener('click', function() {
+    const title = document.getElementById('noteTitle').value;
+    const content = document.getElementById('textContent').value;
+
+    fetch('http://localhost:3000/notes/add', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ title, content })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.error('Error saving note:', error);
+    });
 
     document.getElementById('textResult').innerHTML = document.getElementById('textContent').value;
-})
+});
 
 /* 
 * display specific note when clicked

@@ -38,15 +38,27 @@ router.get("/:id", (req, res) => {
     })
 })
 
-/*
 // POST /notes/add, create note
 router.post("/add", (req, res) => {
-    const newNote = req.body;
-    console.log("new product", newProduct);
+    const { title, content } = req.body;
+    connection.connect((err) => {
+        if (err) {
+            console.log("Error connecting to database:", err);
+            return res.status(500).json({ error: "Database connection error" });
+        }
 
-    connection.connect
-    
-})
-*/
+        const query = `INSERT INTO notes (title, content) VALUES (?, ?)`;
+        connection.query(query, [title, content], (err, result) => {
+            if (err) {
+                console.log("Error inserting note:", err);
+                return res.status(500).json({ error: "Error saving note to database" });
+            }
+
+            console.log("Note saved successfully");
+            res.status(201).json({ message: "Note saved successfully" });
+        });
+    }); 
+});
+
 
 module.exports = router;
