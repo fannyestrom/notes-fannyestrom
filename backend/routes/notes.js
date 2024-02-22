@@ -32,7 +32,7 @@ router.get("/:id", (req, res) => {
         connection.query(query, (err, data) => {
             if (err) console.log("err", err);
 
-            console.log("notes", data);
+            console.log("note", data);
             res.json(data);
         })
     })
@@ -41,7 +41,10 @@ router.get("/:id", (req, res) => {
 /*
 // POST /notes/add, create note
 router.post("/add", (req, res) => {
+    const newNote = req.body;
+    console.log("new product", newProduct);
 
+    connection.connect
     
 })
 */

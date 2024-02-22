@@ -7,6 +7,6 @@ GET http://localhost:3000/notes
 ###
 
 // GET specific document 
-GET http://localhost:3000/notes/2
+GET http://localhost:3000/notes/1
 
 ###

@@ -7,12 +7,20 @@
 
     <link rel="stylesheet" href="scss/style.css" type="text/css">
     <script src="script.js" type="module"></script>
+    <script src="/backend/node_modules/tinymce/tinymce.min.js"></script>
 </head>
 <body>
     <header></header>
     <h1>Notes</h1>
 
     <ul class="notes-list" id="notesList"></ul>
+
+    <div class="note-details" id="noteDetails"></div>
+
+    <textarea class="text-content" id="textContent"></textarea>
+    <button id="saveBtn">Save</button>
+
+    <div id="textResult"></div>
 
 </body>
 </html>
