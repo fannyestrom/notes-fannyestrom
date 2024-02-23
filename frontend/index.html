@@ -10,18 +10,25 @@
     <script src="/backend/node_modules/tinymce/tinymce.min.js"></script>
 </head>
 <body>
-    <header></header>
-    <h1>Notes</h1>
+    <header>
+        <nav>
+            <ul class="nav-content">
+                <li class="nav-link">
+                    <a href="#" id="createNoteLink">New note</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#" id="viewNotesLink">All notes</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#" id="accountLink">Account</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-    <ul class="notes-list" id="notesList"></ul>
-    <div class="note-details" id="noteDetails"></div>
+    <main class="main-content" id="mainContent">
 
-    <textarea class="text-content" id="textContent"></textarea>
-    <button id="saveBtn">Save</button>
-
-    <label for="noteTitle">Title</label>
-    <input type="text" id="noteTitle">
-    <div id="textResult"></div>
+    </main>
 
 </body>
 </html>

@@ -4,18 +4,109 @@
     padding: 0;
 }
 
-h1 {
-    padding: 20px 0px 40px 10px;
+body {
+    font-family: sans-serif;
 }
 
-.notes-list {
-    list-style: none;
+header {
 
-    li {
-        padding: 8px 10px;
-        list-style: none;
-        border-width: 0 0 0.3px 0;
-        border-color: black;
-        border-style: solid;
+    nav {
+
+        .nav-content {
+            display: flex;
+            list-style: none;
+
+            .nav-link {
+                margin: 10px;
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                    transition: color 0.5s ease, transform 0.7s ease;
+                } 
+                
+                a:hover {
+                    color: rgb(151, 151, 151);
+                }
+            }
+        }
     }
+} 
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+
+    .notes-list {
+        list-style: none;
+    
+        li {
+            padding: 8px 10px;
+            list-style: none;
+            border-width: 0 0 0.3px 0;
+            border-color: black;
+            border-style: solid;
+            cursor: pointer;
+        }
+
+        li:hover {
+            color: rgb(151, 151, 151);
+        }
+    }
+
+    .note-details {
+
+        h2 {
+            margin: 10px;
+        }
+
+        p {
+            margin: 10px;
+        }
+    }
+
+    h2 {
+        margin: 10px;
+
+    }
+
+    .note-title {
+        margin: 10px;
+        width: 500px;
+        padding: 5px;
+    }
+
+    .text-content {
+        margin: 10px;
+    }
+
+    div {
+        margin: 10px;
+    }
+
+    .save-btn {
+        margin: 10px;
+        width: 80px;
+        height: 25px;
+        background: none;
+        border: 0.5px solid black;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .save-btn:hover {
+            background-color: #d9d9d9; 
+    }
+        
+    .save-btn:active {
+            transform: scale(0.80); 
+    }
+
+    .text-result {
+        margin: 15px;
+    }
+
 }
+
+

@@ -20,3 +20,23 @@ Content-Type: application/json
 }
 
 ###
+
+# @name users
+POST http://localhost:3000/users/signin
+Content-Type: application/json
+
+{
+    "email": "fanny@mail.com",
+    "password": "fanny"
+}
+
+###
+POST http://localhost:3000/users/register
+Content-Type: application/json
+
+{
+    "email": "test@mail.com",
+    "password": "test"
+}
+
+###
