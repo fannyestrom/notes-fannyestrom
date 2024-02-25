@@ -21,6 +21,22 @@ Content-Type: application/json
 
 ###
 
+PUT http://localhost:3000/notes/1/update
+Content-Type: application/json
+
+{
+  "title": "Updated Title",
+  "content": "Updated Content"
+}
+
+
+###
+
+DELETE http://localhost:3000/notes/1
+
+###
+
+
 # @name users
 POST http://localhost:3000/users/signin
 Content-Type: application/json

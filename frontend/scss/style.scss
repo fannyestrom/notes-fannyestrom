@@ -9,6 +9,7 @@ body {
 }
 
 header {
+    position: fixed;
 
     nav {
 
@@ -36,14 +37,17 @@ header {
 .main-content {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    justify-content: center;
+    height: 100vh;
 
     .notes-list {
         list-style: none;
+        position: absolute;
+        top: 50px;
     
         li {
+            width: 100vw;
             padding: 8px 10px;
-            list-style: none;
             border-width: 0 0 0.3px 0;
             border-color: black;
             border-style: solid;
@@ -52,6 +56,20 @@ header {
 
         li:hover {
             color: rgb(151, 151, 151);
+        }
+
+        .edit-btn, .delete-btn {
+            position: absolute;
+            right: 85px;
+            padding: 2px 5px;
+            background: none;
+            border: 0.5px solid black;
+            cursor: pointer;
+        }
+
+        .delete-btn {
+            position: absolute;
+            right: 30px;
         }
     }
 
@@ -107,6 +125,68 @@ header {
         margin: 15px;
     }
 
+    .login-container, .register-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .register-form, .user-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            input {
+                width: 300px;
+                padding: 3px;
+                margin: 5px;
+            }
+        }
+
+        button {
+            margin: 10px;
+            width: 80px;
+            height: 25px;
+            background: none;
+            border: 0.5px solid black;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+    
+        button:hover {
+                background-color: #d9d9d9; 
+        }
+            
+        button:active {
+                transform: scale(0.80); 
+        }
+    }
+
+    .already-have-account, .register-link {
+        margin: 10px;
+        align-self: center;
+    }
+
+    .welcome-heading {
+        margin-bottom: 20px;
+    }
+
+}
+
+#notification {
+    position: relative;
+    bottom: 30px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.success {
+    background-color: #4CAF50; 
+    color: white;
+}
+
+.error {
+    background-color: #f44336;
+    color: white;
 }
 
 
