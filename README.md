@@ -39,4 +39,4 @@ This assignment involved building a Document Management System with a SQL data b
 - TinyMCE
 
 ## Instructions
-To start the server use *npm start*. To start and run the project right-click inside the index.html file located within the "frontend" folder and choose *"Open with Live server"*. 
+To start the server use *npm start*. To start and run the project right-click inside the index.html file located within the "frontend" folder and choose *"Open with Live server"*. An exported SQL file of the Notes data base has been added to the "database" folder.
