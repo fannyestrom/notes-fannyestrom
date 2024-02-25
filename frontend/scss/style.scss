@@ -40,6 +40,10 @@ header {
     justify-content: center;
     height: 100vh;
 
+    .please-sign-in {
+        align-self: center;
+    }
+
     .notes-list {
         list-style: none;
         position: absolute;

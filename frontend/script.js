@@ -73,18 +73,25 @@ function textEditor() {
     });
 }
 
-/* 
+/*
 * function to display all notes view
 */
 function allNotesView() {
     const mainContent = document.getElementById('mainContent');
-    mainContent.innerHTML = `
-        <ul class="notes-list" id="notesList"></ul>
-        <div class="note-details" id="noteDetails"></div>
-    `;
+    const user = JSON.parse(localStorage.getItem('user'));
 
-    printNotes();
+    if (user) {
+        mainContent.innerHTML = `
+            <ul class="notes-list" id="notesList"></ul>
+            <div class="note-details" id="noteDetails"></div>
+        `;
+        
+        printNotes();
+    } else {
+        mainContent.innerHTML = `<p class="please-sign-in">Please sign in to view your notes.</p>`;
+    }
 }
+
 
 /*
 * function to display specific note when clicked
